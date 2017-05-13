@@ -24,6 +24,7 @@ setup(name='mutt-atlassian',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'pytest',
           # -*- Extra requirements: -*-
           'jira',
           'html2text',
