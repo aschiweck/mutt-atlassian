@@ -26,13 +26,11 @@ setup(name='mutt-atlassian',
           'setuptools',
           # -*- Extra requirements: -*-
           'jira',
+          'html2text',
       ],
       entry_points={
           'console_scripts': [
               'mutt2jira=mutt.atlassian.scripts.mutt2jira:main'
           ],
       }
-      # entry_points="""
-      # # -*- Entry points: -*-
-      # """,
-      )
+)
