@@ -6,8 +6,8 @@ version = '0.1a1'
 setup(name='mutt-atlassian',
       version=version,
       description="Integrations of Atlassian products (JIRA, Confluence) for Mutt.",
-      long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      # long_description=open("README.txt").read() + "\n" +
+      #                  open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
