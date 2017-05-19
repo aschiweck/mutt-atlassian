@@ -9,7 +9,6 @@ import textwrap
 
 from mutt.atlassian.config import TERMWIDTH
 
-
 def _compact(string, length=0):
     """
     """
@@ -18,7 +17,7 @@ def _compact(string, length=0):
         words = string.split()
         suffix = ' [...]'
         l, index = len(suffix), 0
-        while l < length - len(suffix):
+        while l <= length: # - len(suffix):
             out.append(words[index])
             l += len(words[index]) + 1
             index += 1

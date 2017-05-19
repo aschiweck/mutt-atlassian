@@ -57,4 +57,8 @@ def get_config(path):
         config.set('globals', 'clear', eval(config.get('globals', 'clear')))
     except ConfigParser.NoOptionError:
         config.set('globals', 'clear', False)
+    try:
+        config.set('auth', 'kerberos', eval(config.get('auth', 'kerberos')))
+    except ConfigParser.NoOptionError:
+        config.set('auth', 'kerberos', False)
     return config
