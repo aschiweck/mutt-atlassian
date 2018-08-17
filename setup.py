@@ -25,8 +25,9 @@ setup(name='mutt-atlassian',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'jira',
           'html2text',
+          'jira',
+          'requests_kerberos',
       ],
       entry_points={
           'console_scripts': [

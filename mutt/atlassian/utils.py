@@ -29,7 +29,7 @@ def get_yes_or_no(question):
     """
     """
     reply = str(raw_input('\n'+question+'\n(<y>/n)> ')).lower().strip()
-    if reply[0] == 'y':
+    if not reply or reply[0] == 'y':
         return True
     if reply[0] == 'n':
         return False
