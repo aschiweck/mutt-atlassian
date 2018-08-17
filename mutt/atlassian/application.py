@@ -22,7 +22,10 @@ def get_jira(config):
         basic_auth = None
     try:
         kerberos = config.get('auth', 'kerberos')
-        config.set('auth', 'kerberos', eval(config.get('auth', 'kerberos')))
+        # config.set('auth', 'kerberos', eval(config.get('auth', 'kerberos')))
+        # if kerberos:
+        #     return JIRA(config.get('globals', 'url'), kerberos=kerberos)
+        #     basic_auth = None
     except ConfigParser.NoOptionError:
         kerberos = False
     return JIRA(config.get('globals', 'url'), basic_auth=basic_auth, kerberos=kerberos)
