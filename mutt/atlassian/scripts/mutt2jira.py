@@ -101,7 +101,10 @@ def main():
                     s = []
                     words = search.split()
                     for word in words:
-                        s.append('summary~"'+word+'*"')
+                        if re.search(ISSUEKEY, word):
+                            s.append('issue="'+word+'"')
+                        else:
+                            s.append('summary~"'+word+'*"')
                     jql = ' AND '.join(s)
                 issues = {}
                 for issue in jira.search_issues(jql):
@@ -200,6 +203,7 @@ def main():
             project = raw_input("(project)> ")
         except KeyboardInterrupt:
             sys.exit(1)
+
         for key in projects.keys():
             if projects[key] == project:
                 project = jira.project(key)
